@@ -5,18 +5,24 @@
 :root {
   --background: #ffffff;
   --foreground: #313234;
+  --card-favorite: #f1f1f1;
+  --card: #f9f9f9;
   --brand: #11b0c8;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --card-favorite: #313234;
+  --card: #1a1a1a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand: var(--brand);
+  --color-card: var(--card);
+  --color-card-favorite: var(--card-favorite);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
