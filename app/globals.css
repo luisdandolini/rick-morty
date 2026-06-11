@@ -5,16 +5,18 @@
 :root {
   --background: #ffffff;
   --foreground: #313234;
-  --card-favorite: #f1f1f1;
   --card: #f9f9f9;
+  --card-favorite: #f1f1f1;
   --brand: #11b0c8;
+  --border: #313234;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --card-favorite: #313234;
   --card: #1a1a1a;
+  --card-favorite: #313234;
+  --border: transparent;
 }
 
 @theme inline {
@@ -23,6 +25,7 @@
   --color-brand: var(--brand);
   --color-card: var(--card);
   --color-card-favorite: var(--card-favorite);
+  --color-border: var(--border);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
