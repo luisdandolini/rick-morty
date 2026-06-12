@@ -8,7 +8,7 @@ export function buttonStyles(
   className?: string
 ) {
   return cn(
-    "inline-flex items-center justify-center gap-2 rounded-4xl px-1.5 py-1 text-xs md:text-sm font-normal transition-colors h-3.5 md:h-8",
+    "cursor-pointer inline-flex items-center justify-center gap-2 rounded-4xl px-1.5 py-1 text-xs md:text-sm font-normal transition-colors md:h-8",
     "disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",
     {
       "bg-brand text-white hover:opacity-90": variant === "primary",
