@@ -5,9 +5,9 @@ import { buttonStyles } from "@/shared/components/ui/Button";
 import Link from "next/link";
 import { PiSquaresFour } from "react-icons/pi";
 import { useCharacters } from "@/features/characters/hooks/useCharacters";
-import { CharactersLoading } from "./CharactersLoading";
-import { CharactersEmpty } from "./CharactersEmpty";
-import { CharactersError } from "./CharactersError";
+import { LoadingState } from "@/shared/components/LoadingState";
+import { ErrorState } from "@/shared/components/ErrorState";
+import { EmptyState } from "@/shared/components/EmptyState";
 
 export function Characters() {
   const { data, isLoading, isError } = useCharacters();
@@ -25,11 +25,13 @@ export function Characters() {
         </Link>
       </div>
 
-      {isLoading && <CharactersLoading />}
+      {isLoading && <LoadingState text="personagens" />}
 
-      {isError && <CharactersError />}
+      {isError && <ErrorState text="personagens" />}
 
-      {!isLoading && !isError && !hasCharacters && <CharactersEmpty />}
+      {!isLoading && !isError && !hasCharacters && (
+        <EmptyState text="personagem" />
+      )}
 
       {hasCharacters && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
