@@ -1,6 +1,7 @@
-import { Episodes } from "@/features/home/components/Episodes";
-import { Characters } from "@/features/home/components/Characters";
-import { Hero } from "@/features/home/components/Hero";
+import { Episodes } from "@/templates/home/components/Episodes";
+import { Characters } from "@/templates/home/components/Characters";
+import { Hero } from "@/templates/home/components/Hero";
+import { Locations } from "@/templates/home/components/Locations";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Characters />
       <Episodes />
+      <Locations />
     </main>
   );
 }
