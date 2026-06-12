@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/shared/providers/ThemeProvider";
 import { Header } from "@/shared/components/Header";
 import { QueryProvider } from "@/shared/providers/QueryProvider";
+import { Footer } from "@/shared/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,6 +38,7 @@ export default function RootLayout({
           <ThemeProvider>
             <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </QueryProvider>
       </body>
