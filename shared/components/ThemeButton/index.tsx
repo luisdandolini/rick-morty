@@ -1,10 +1,8 @@
 "use client";
-import Image from "next/image";
 import { Button } from "../ui/Button";
 import { useThemeStore } from "@/shared/store/useThemeStore";
-import MoonDark from "@/public/icons/moon-dark.svg";
-import MoonLight from "@/public/icons/moon-light.svg";
-import SunLight from "@/public/icons/sun-light.svg";
+import { PiMoonLight } from "react-icons/pi";
+import { PiSun } from "react-icons/pi";
 
 export function ThemeButton() {
   const setTheme = useThemeStore((state) => state.setTheme);
@@ -18,19 +16,18 @@ export function ThemeButton() {
       <Button
         variant="ghost"
         onClick={() => setTheme("dark")}
-        className="px-3 py-1.5 rounded-full dark:bg-brand dark:text-white dark:hover:bg-brand/90"
+        className="rounded-full dark:bg-brand dark:text-white dark:hover:bg-brand/90"
       >
-        <Image src={MoonLight} alt="" className="w-5 h-5 block dark:hidden" />
-        <Image src={MoonDark} alt="" className="w-5 h-5 hidden dark:block" />
+        <PiMoonLight className="size-5" aria-hidden />
         Escuro
       </Button>
 
       <Button
         variant="ghost"
         onClick={() => setTheme("light")}
-        className="px-3 py-1.5 rounded-full bg-brand text-white hover:bg-brand/90 dark:bg-foreground/10 dark:text-foreground dark:hover:bg-foreground/5"
+        className="rounded-full bg-brand text-white hover:bg-brand/90 dark:bg-foreground/10 dark:text-foreground dark:hover:bg-foreground/5"
       >
-        <Image src={SunLight} alt="" className="w-5 h-5" />
+        <PiSun className="size-5" aria-hidden />
         Claro
       </Button>
     </div>

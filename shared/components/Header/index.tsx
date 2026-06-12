@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { buttonStyles } from "../ui/Button";
 import Logo from "@/public/logo.webp";
-import Heart from "@/public/icons/heart-light.svg";
 import Link from "next/link";
+import { CiHeart } from "react-icons/ci";
 
 export function Header() {
   return (
@@ -20,7 +20,7 @@ export function Header() {
       </Link>
 
       <Link href="/favorites" className={buttonStyles("primary")}>
-        <Image src={Heart} width={20} height={18} alt="" />
+        <CiHeart className="size-5.5" aria-hidden />
         Lista de favoritos
       </Link>
     </header>
